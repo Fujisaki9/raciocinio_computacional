@@ -10,13 +10,11 @@ def main():
     opcao = services.validar_integer("[bold green]Escolha uma opção:[/] ")
     match opcao:
         case 1:
-            while True:
-                aporte_inicial = services.validar_float("[bold yellow]Aporte inicial: R$[/]  ")
-                taxa_juros = services.validar_float("[bold yellow]Taxa de juros mensal (%):[/]  ")
-                tempo_investimento = services.validar_float("[bold yellow]Tempo de investimento (meses):[/]  ")
-                taxa_inflacao = services.validar_float("[bold yellow]Inflação no período (%):[/]  ")
-                break
-    
+            aporte_inicial = services.validar_float("[bold yellow]Aporte inicial: R$[/]  ")
+            taxa_juros = services.validar_float("[bold yellow]Taxa de juros mensal (%):[/]  ")
+            tempo_investimento = services.validar_float("[bold yellow]Tempo de investimento (meses):[/]  ")
+            taxa_inflacao = services.validar_float("[bold yellow]Inflação no período (%):[/]  ")
+                
             # Cria o objeto Juros Simples
             juros_simples = JurosSimples(aporte_inicial, taxa_juros, tempo_investimento, taxa_inflacao)
     
@@ -31,13 +29,11 @@ def main():
     
     
         case 2:
-            while True:
-                aporte_inicial = services.validar_float("[bold yellow]Aporte inicial: R$[/]  ")
-                taxa_juros = services.validar_float("[bold yellow]Taxa de juros mensal (%):[/]  ")
-                tempo_investimento = services.validar_float("[bold yellow]Tempo de investimento (meses):[/]  ")
-                aporte_mensal = services.validar_float("[bold yellow]Aporte mensal: R$[/]  ")
-                taxa_inflacao = services.validar_float("[bold yellow]Inflação no período (%):[/]  ")
-                break
+            aporte_inicial = services.validar_float("[bold yellow]Aporte inicial: R$[/]  ")
+            taxa_juros = services.validar_float("[bold yellow]Taxa de juros mensal (%):[/]  ")
+            tempo_investimento = services.validar_float("[bold yellow]Tempo de investimento (meses):[/]  ")
+            aporte_mensal = services.validar_float("[bold yellow]Aporte mensal: R$[/]  ")
+            taxa_inflacao = services.validar_float("[bold yellow]Inflação no período (%):[/]  ")
     
             # Cria o objeto Juros Compostos
             juros_compostos = JurosCompostos(aporte_inicial, taxa_juros, tempo_investimento, aporte_mensal, taxa_inflacao)
@@ -54,6 +50,10 @@ def main():
         case 3:
             rprint("[bold green]Programa encerrado![/]")
 
+
+        case _:
+            rprint("[bold red]ERRO: Algo deu errado![/]")
+            
 
 if __name__ = "__main__":
     main()
