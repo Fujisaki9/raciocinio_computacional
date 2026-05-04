@@ -4,7 +4,7 @@ Este projeto é um sistema de gerenciamento de coleções desenvolvido para a di
 
 ## 🛠️ Tecnologias Utilizadas
 * **Linguagem**: Python 3
-* **Bibliotecas**: `json` (persistência), `time` (controle de fluxo)
+* **Bibliotecas**: `json` (persistência de dados), `time` (controle de fluxo), `rich` (formatação visual), `datetime` (manipulação de datas)
 * **Ambiente**: PyCharm
 
 ## 📋 Lista de Comandos e Funcionalidades
@@ -23,7 +23,7 @@ Este projeto é um sistema de gerenciamento de coleções desenvolvido para a di
 ## 🚀 Como Executar
 1. Certifique-se de ter o **Python** instalado.
 2. Baixe os arquivos `main.py`, `services.py` e `utils.py`.
-3. No terminal, execute: `python main.py`.
+3. Se utilizar PyCharm: Habilite `Emulate terminal in output` em `Run > Edit configurations > Edit configuration templates > Python > Modify options` para visualizar a interface colorida deste gestor.
 
 ---
 Desenvolvido por **Celso Henrique Pereira Benassi**.
