@@ -2,7 +2,7 @@
 
 from rich.console import Console
 from rich.table import Table
-
+from services import montar_tabela
 
 def mostrar_menu():
     """
@@ -32,19 +32,14 @@ def mostrar_relatorio_final(dicionario: dict):
     table.add_column("Descrição", style = "dim", width = 35)
     table.add_column("Valor", justify = "right")
     table.add_section()
-    table.add_row("[bold bright_white]Aporte Inicial[/]", dicionario["Investimento"])
-    table.add_row("[bold bright_white]Montante Bruto[/]", dicionario["Montante Bruto"])
-    table.add_row("[bold bright_white]Rentabilidade Bruta (%)[/]", dicionario["Rentabilidade Bruta"])
-    table.add_row("[bold bright_white]Lucro Bruto (sem descontos)[/]", dicionario["Rendimento Bruto"])
-    table.add_section()
-    table.add_row("[bold bright_white]Alíquota de IR (%)[/]", dicionario["Aliquota Ir"])
-    table.add_row("[bold bright_white]Valor do Desconto[/]", dicionario["Valor Imposto"])
-    table.add_section()
-    table.add_row("[bold bright_white]Rentabilidade Líquida (%)[/]", dicionario["Rentabilidade Liquida"])
-    table.add_row("[bold bright_white]Lucro Líquido (com descontos)[/]", dicionario["Rendimento Liquido"])
-    table.add_section()
-    table.add_row("[bold bright_white]Total para Saque (Montante Líquido)[/]", dicionario["Montante Liquido"])
-    table.add_row("[bold bright_white]Ganho Real (acima da inflação) (%)[/]", dicionario["Ganho Real"])
+    
+    for i in montar_tabela():
+        if i is None:
+            table.add_section()
+        else:
+            descricao, chave = i
+            table.add_row(f"[bold bright_white]{descricao}[/]", dicionario[chave])
+            
     console = Console()
     console.print(table)
 
