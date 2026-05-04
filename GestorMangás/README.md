@@ -2,7 +2,7 @@
 
 Este projeto é um sistema de gerenciamento de coleções desenvolvido para a disciplina de **Raciocínio Computacional** do curso de **Análise e Desenvolvimento de Sistemas (ADS)** na **PUCPR**. O objetivo é gerenciar uma coleção pessoal de mangás através do terminal, com persistência de dados em JSON.
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias e Bibliotecas utilizadas
 * **Linguagem**: Python 3
 * **Bibliotecas**: `json` (persistência de dados), `time` (controle de fluxo), `rich` (formatação visual), `datetime` (manipulação de datas)
 * **Ambiente**: PyCharm
