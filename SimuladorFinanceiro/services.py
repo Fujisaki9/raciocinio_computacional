@@ -100,7 +100,7 @@ def exportar_relatorio_txt(dicionario: dict):
     table.add_row("Aporte Inicial", dicionario["Investimento"])
     table.add_row("Montante Bruto", dicionario["Montante Bruto"])
     table.add_row("Rentabilidade Bruta (%)", dicionario["Rentabilidade Bruta"])
-    table.add_row("Lucro Bruto (sem descontos)", dicionario["Lucro Bruto"])
+    table.add_row("Lucro Bruto (sem descontos)", dicionario["Rendimento Bruto"])
     table.add_section()
     table.add_row("Alíquota de IR (%)", dicionario["Aliquota Ir"])
     table.add_row("Valor do Desconto", dicionario["Valor Imposto"])
