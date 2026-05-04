@@ -35,7 +35,7 @@ def mostrar_relatorio_final(dicionario: dict):
     table.add_row("[bold bright_white]Aporte Inicial[/]", dicionario["Investimento"])
     table.add_row("[bold bright_white]Montante Bruto[/]", dicionario["Montante Bruto"])
     table.add_row("[bold bright_white]Rentabilidade Bruta (%)[/]", dicionario["Rentabilidade Bruta"])
-    table.add_row("[bold bright_white]Lucro Bruto (sem descontos)[/]", dicionario["Lucro Bruto"])
+    table.add_row("[bold bright_white]Lucro Bruto (sem descontos)[/]", dicionario["Rendimento Bruto"])
     table.add_section()
     table.add_row("[bold bright_white]Alíquota de IR (%)[/]", dicionario["Aliquota Ir"])
     table.add_row("[bold bright_white]Valor do Desconto[/]", dicionario["Valor Imposto"])
