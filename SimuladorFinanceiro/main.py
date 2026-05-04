@@ -5,7 +5,7 @@ from simulators import JurosSimples, JurosCompostos
 import view
 import services
 
-    def main():
+def main():
     view.mostrar_menu()
     opcao = services.validar_integer("[bold green]Escolha uma opção:[/] ")
     match opcao:
