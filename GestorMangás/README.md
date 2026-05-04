@@ -1,19 +1,29 @@
-# GESTOR DE MANGÁS
+# 📚 Gestor de Mangás
 
-📋 LISTA DE COMANDOS
+Este projeto é um sistema de gerenciamento de coleções desenvolvido para a disciplina de **Raciocínio Computacional** do curso de **Análise e Desenvolvimento de Sistemas (ADS)** na **PUCPR**. O objetivo é gerenciar uma coleção pessoal de mangás através do terminal, com persistência de dados em JSON.
 
-ADD    ->  Inicia o cadastro de novos mangás, solicitando o nome e o status de conclusão.
+## 🛠️ Tecnologias Utilizadas
+* **Linguagem**: Python 3
+* **Bibliotecas**: `json` (persistência), `time` (controle de fluxo)
+* **Ambiente**: PyCharm
 
-LIST   ->  Exibe uma tabela organizada com todos os itens que você já cadastrou.
+## 📋 Lista de Comandos e Funcionalidades
 
-UPDATE ->  Permite localizar um mangá e alterar suas informações.
+| Comando | Ação | Descrição |
+| :--- | :--- | :--- |
+| `ADD` | Cadastrar | Inicia o cadastro de novos mangás, solicitando o nome e status. |
+| `LIST` | Listar | Exibe uma lista organizada com todos os itens cadastrados. |
+| `UPDATE` | Alterar | Permite localizar um mangá específico e alterar suas informações. |
+| `DELETE` | Remover | Remove um mangá específico da sua lista. |
+| `STATS` | Estatísticas | Gera um resumo estatístico mostrando quantos mangás estão concluídos e quantos ainda estão em andamento. |
+| `SEARCH` | Buscar | Verifica se um título específico já existe na coleção. |
+| `ABOUT` | Informações | Exibe as informações do projeto e do desenvolvedor. |
+| `QUIT` | Sair | Salva as alterações no arquivo `mangas.json` e encerra o programa. |
 
-DELETE ->  Remove um mangá específico da sua lista.
+## 🚀 Como Executar
+1. Certifique-se de ter o **Python** instalado.
+2. Baixe os arquivos `main.py`, `services.py` e `utils.py`.
+3. No terminal, execute: `python main.py`.
 
-STATS  ->  Gera um resumo estatístico mostrando quantos mangás estão concluídos e quantos ainda estão em andamento.
-
-SEARCH ->  Busca rápida para verificar se um título específico já existe na sua coleção.
-
-ABOUT  ->  Exibe as informações do projeto.
-
-QUIT   ->  Salva automaticamente todas as alterações no arquivo mangas.json e encerra o programa.
+---
+Desenvolvido por **Celso Henrique Pereira Benassi**.
