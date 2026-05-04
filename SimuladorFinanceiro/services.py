@@ -57,7 +57,7 @@ def formatar_relatorio_final(dicionario: dict) -> dict:
     return novo_dicionario
 
 
-def montar_tabela() -> list:
+def definir_linhas_relatorio() -> list:
     lista = [("Aporte Inicial", "Investimento"),
              ("Montante Bruto", "Montante Bruto"),
              ("Rentabilidade Bruta (%)", "Rentabilidade Bruta"),
@@ -116,7 +116,7 @@ def exportar_relatorio_txt(dicionario: dict):
     table.add_column("Valor", justify="right")
     table.add_section()
     
-    for i in montar_tabela():
+    for i in definir_linhas_relatorio():
         if i is None:
             table.add_section()
         else:
