@@ -57,6 +57,24 @@ def formatar_relatorio_final(dicionario: dict) -> dict:
     return novo_dicionario
 
 
+def montar_tabela() -> list:
+    lista = [("Aporte Inicial", "Investimento"),
+             ("Montante Bruto", "Montante Bruto"),
+             ("Rentabilidade Bruta (%)", "Rentabilidade Bruta"),
+             ("Lucro Bruto (sem descontos)", "Rendimento Bruto"),
+             None,
+             ("Alíquota de IR (%)", "Aliquota Ir"),
+             ("Valor do Desconto", "Valor Imposto"),
+             None,
+             ("Rentabilidade Líquida (%)", "Rentabilidade Liquida"),
+             ("Lucro Líquido (com descontos)", "Rendimento Liquido"),
+             None,
+             ("Total para Saque (Montante Líquido)", "Montante Liquido"),
+             ("Ganho Real (acima da inflação) (%)", "Ganho Real")
+             ]
+    return lista
+
+
 def inserir_dados_txt(dicionario: dict):
     """
     Pergunta ao usuário se deseja salvar os dados e coordena a exportação para TXT.
@@ -97,19 +115,13 @@ def exportar_relatorio_txt(dicionario: dict):
     table.add_column("Descrição", style="dim")
     table.add_column("Valor", justify="right")
     table.add_section()
-    table.add_row("Aporte Inicial", dicionario["Investimento"])
-    table.add_row("Montante Bruto", dicionario["Montante Bruto"])
-    table.add_row("Rentabilidade Bruta (%)", dicionario["Rentabilidade Bruta"])
-    table.add_row("Lucro Bruto (sem descontos)", dicionario["Rendimento Bruto"])
-    table.add_section()
-    table.add_row("Alíquota de IR (%)", dicionario["Aliquota Ir"])
-    table.add_row("Valor do Desconto", dicionario["Valor Imposto"])
-    table.add_section()
-    table.add_row("Rentabilidade Líquida (%)", dicionario["Rentabilidade Liquida"])
-    table.add_row("Lucro Líquido (com descontos)", dicionario["Rendimento Liquido"])
-    table.add_section()
-    table.add_row("Total para Saque (Montante Líquido)", dicionario["Montante Liquido"])
-    table.add_row("Ganho Real (acima da inflação) (%)", dicionario["Ganho Real"])
+    
+    for i in montar_tabela():
+        if i is None:
+            table.add_section()
+        else:
+            descricao, chave = i
+            table.add_row(descricao, dicionario[chave])
 
     rprint("[bold green]Criando um arquivo.txt...[/]")
     sleep(1)
