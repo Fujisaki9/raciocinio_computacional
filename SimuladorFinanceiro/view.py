@@ -2,7 +2,7 @@
 
 from rich.console import Console
 from rich.table import Table
-from services import montar_tabela
+from services import definir_linhas_relatorio
 
 def mostrar_menu():
     """
@@ -33,7 +33,7 @@ def mostrar_relatorio_final(dicionario: dict):
     table.add_column("Valor", justify = "right")
     table.add_section()
     
-    for i in montar_tabela():
+    for i in definir_linhas_relatorio():
         if i is None:
             table.add_section()
         else:
