@@ -72,7 +72,6 @@ class CalculosFinanceiros(ABC): # Classe abstrata
         dicionario["montante_bruto"] = self.calcular_montante_bruto()
         dicionario["rendimento_bruto"] = dicionario["montante_bruto"] - dicionario["investimento"]
         dicionario["rentabilidade_bruta"] = (dicionario["rendimento_bruto"] / dicionario["investimento"] ) * 100
-        dicionario["lucro_bruto"] = (dicionario["rentabilidade_bruta"] * dicionario["investimento"] ) / 100
 
         taxa_imposto_renda = self.calcular_taxa_imposto_renda()
         dicionario["aliquota_ir"] = taxa_imposto_renda * 100
