@@ -34,6 +34,10 @@ Uma ferramenta simples para calcular o crescimento de valores através de regime
 **Poder de compra (Inflação)**
 * **Ganho Real**: É o lucro que sobra após descontar a inflação; ele mostra se o seu dinheiro realmente valerá mais do que no início ou se apenas acompanhou o aumento dos preços.
 
+**DEMONSTRATIVO**
+
+![Demonstração do Simulador](simulacao.jpeg)
+
 ---
 
 ## 🚀 Como Executar
