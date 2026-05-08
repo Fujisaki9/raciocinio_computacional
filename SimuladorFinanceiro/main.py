@@ -2,8 +2,7 @@
 
 from rich import print as rprint
 from simulators import JurosSimples, JurosCompostos
-import view
-import services
+import view, services
 
 def main():
     view.mostrar_menu()
