@@ -14,6 +14,10 @@ Uma ferramenta simples para calcular o crescimento de valores através de regime
 |`2`|Juros Compostos|`Aporte inicial (R$)`, `Taxa de juros mensal (%)`, `Tempo de investimento (meses)`, `Taxa de inflação no período (%)` e `Aporte mensal (R$)`|
 |`3`|Sair do programa|`None`|
 
+## 📄 Exportação de Resultados
+Ao final de cada simulação, o programa oferece a opção de salvar os resultados em um arquivo `.txt` no diretório atual.
+O arquivo gerado contém todos os indicadores da simulação (montante bruto, rendimento líquido, imposto, inflação, etc.), funcionando como um comprovante ou histórico da consulta realizada.
+
 ## 📊 Indicadores de Resultado da Simulação
 
 **Visão Bruta (sem descontos)**
