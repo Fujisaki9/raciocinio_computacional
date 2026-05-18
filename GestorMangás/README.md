@@ -22,8 +22,9 @@ Este projeto é um sistema de gerenciamento de coleções desenvolvido para a di
 
 ## 🚀 Como Executar
 1. Certifique-se de ter o **Python** instalado.
-2. Baixe os arquivos `main.py`, `services.py` e `utils.py`.
-3. Se utilizar PyCharm: Habilite `Emulate terminal in output` em `Run > Edit configurations > Edit configuration templates > Python > Modify options` para visualizar a interface colorida deste gestor.
+2. Clone o repositório ou baixe os arquivos `main.py`, `services.py` e `utils.py`.
+3. Instale as dependências: `-pip install rich`.
+4. ⚠️ **PyCharm:** Habilite *Emulate terminal in output* em `Run > Edit configurations > Edit configuration templates > Python > Modify options` para visualizar a interface colorida.
 
 ---
 Desenvolvido por **Celso Henrique Pereira Benassi**.
